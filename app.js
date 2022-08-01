@@ -47,7 +47,7 @@ const morgan = require('morgan');
 // 'connect-mongodb-session' => To Connect with MongoDB Database Session
 const MongoDBStore = require('connect-mongodb-session')(session);
 // Cloud Link of Current or Required Database
-const MONGODB_URI = "mongodb+srv://eshopvikasnannu:eshopvikasnannu@eshopvikasnannunodeclus.lwyys.mongodb.net/myShopData";
+const MONGODB_URI = "";
 // Connecting to Database
 const store = new MongoDBStore({
     uri: MONGODB_URI,
