@@ -1,0 +1,64 @@
+.orders {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.orders__item h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.orders__item {
+  box-shadow: 0 3px 11px rgba(0, 0, 0, 0.26);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.orders__products {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.orders__products-item {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1.5px solid #00695c;
+  color: #00695c;
+}
+
+.no-order {
+  font-size: 3rem;
+  font-weight: 800;
+  color: brown;
+}
+
+.yes-order {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #36ae7c;
+}
+
+.order-now-shop {
+  font-size: 4rem;
+  padding: 1rem;
+  color: black;
+  background-color: #ffd24c;
+}
+
+.invoice-link {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #feb139;
+  font-weight: 1200;
+}
+
+.order-no {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #632a06;
+  font-weight: 1200;
+  margin: 0;
+  padding: 0;
+}

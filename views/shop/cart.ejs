@@ -1,0 +1,53 @@
+<%- include('../includes/head.ejs') %>
+
+</head>
+
+<body>
+    <%- include('../includes/nav.ejs') %>
+
+    <main>
+
+        <% if (products.length > 0) { %>
+
+        <div class="centered">
+            <h1 style="margin:0" class="no-order">Products in your cart 😻🎯</h1>
+        </div>
+
+        <hr>
+
+        <ul class="cart__item-list">
+            <% products.forEach(p => { %>
+            <hr>
+            <li class="cart__item">
+                <h1><%= p.productId.title %></h1>
+                <h2>Quantity: <%= p.quantity %></h2>
+                <h3>Price PU: ₹<%= p.productId.price %> </h3>
+                <form action="/cart-delete-item" method="POST">
+                    <input type="hidden" value="<%= p.productId._id %>" name="productId">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <button class="btn danger" type="submit"> Delete 🥵</button>
+                </form>
+            </li>
+            <hr>
+            <% }) %>
+        </ul>
+
+        <hr>
+
+        <div class="centered">
+            <a class="btn btn-order" href="/checkout">Order Now!</a>
+        </div>
+
+        <% } else { %>
+
+        <div class="centered">
+            <h1 class="no-order">Nothing there! 😿</h1>
+            <h1 class="yes-order">Add your favrout product now! 😻</h1>
+            <div><a class="btn order-now-shop" href="/shop-products">Shop Now! 🎯</a></div>
+        </div>
+        
+        <% } %>
+
+    </main>
+
+    <%- include('../includes/end.ejs') %>

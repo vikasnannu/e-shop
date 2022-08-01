@@ -1,0 +1,95 @@
+<%- include('../includes/head.ejs') %>
+
+</head>
+
+<body>
+    <%- include('../includes/nav.ejs') %>
+
+    <h1 class="main-head"> Node.js Application - E-Shop </h1>
+
+    <div class="tech-stack">
+        <ul class="stack-list">
+            <li>Database ➡ <p class="ts-p"> MongoDB </p></li>
+            <li>Framework/s ➡ <p class="ts-p"> Express.js </p></li>
+            <li>Templating Engine ➡ <p class="ts-p"> Embedded JS </p>  </li>
+            <li>Library/s ➡ <p class="ts-p"> Mongoose </p> </li>
+            <li>Server/Cloud ➡ <p class="ts-p"> Amazon Web Server + Heroku </p> </li>
+        </ul>
+    </div>
+
+
+    <h2 class="sub-head">E-Shop Functionalities</h2>
+
+    <div class="list-board">
+        <ul class="grid-list">
+            <li>
+                <p class="shop-l-h centered">❇ Authorization Function</p>
+            </li>
+            <li>✔ Sign Up and Confirmation</li>
+            <li>✔ Login and Authentication</li>
+            <li>✔ Resetting Passwords **</li>
+        </ul>
+
+        <ul class="grid-list">
+            <li>
+                <p class="shop-l-h centered">❇ Admin Functionalities</p>
+            </li>
+            <li>✔ C => Creating Products to Sell</li>
+            <li>✔ R => Reading Products</li>
+            <li>✔ U => Updating or Editing Products</li>
+            <li>✔ D => Deleting Products</li>
+        </ul>
+
+        <ul class="grid-list">
+            <li>
+                <p class="shop-l-h centered">❇ Users Functionalities</p>
+            </li>
+            <li>✔ Adding or Editing Cart</li>
+            <li>✔ Placing Orders or Checkout</li>
+            <li>✔ Making Payments or Transactions</li>
+            <li>✔ Getting Order Details and Invoice</li>
+        </ul>
+    </div>
+
+    <div class="api centered">
+        <div class="api-head">3rd Party API's Integrated</div>
+        <ul class="api-list">
+            <li>⛓<p class="api-l"> MAILTRAP API </p> 🔛 To Send Conformation and Password Reseting Mails</li>
+            <li>⛓<p class="api-l"> STRIPE PAYMENTS API </p> 🔛 To Make Transaction and Payments on Checkout</li>
+        </ul>
+    </div>
+
+    <div class="npm centered">
+        <div class="npm-head">NPM Packages Integrated</div>
+        <ul class="npm-list">
+            <li> <p class="npm-l"> 🔷 'express-session'</p> 🟰 To Create and Manage Session Middleware </li>
+            <li> <p class="npm-l"> 🔷 'connect-flash'</p> 🟰 To Store Messages during Sessions </li>
+            <li> <p class="npm-l"> 🔷 'csurf'</p> 🟰 To Create a Middleware for CSRF Token and Validation </li>
+            <li> <p class="npm-l"> 🔷 'express-validator'</p> 🟰 To Validate and Sanitize Data from Server </li>
+            <li> <p class="npm-l"> 🔷 'validator'</p> 🟰 To Validate and Sanitize Strings from Inputs </li>
+            <li> <p class="npm-l"> 🔷 'bcryptjs'</p> 🟰 To Hash The Passwords </li>
+            <li> <p class="npm-l"> 🔷 'crypto'</p> 🟰 To Encrypts and Decrypts Data </li>
+            <li> <p class="npm-l"> 🔷 'pdfkit'</p> 🟰 To Make PDF Documents </li>
+            <li> <p class="npm-l"> 🔷 'multer'</p> 🟰 To handle Multipart/Form-Data, primarily for Uploading Files </li>
+            <li> <p class="npm-l"> 🔷 'compression'</p> 🟰 To Compress Response Bodies for Request from the Middleware </li>
+            <li> <p class="npm-l"> 🔷 'morgan'</p> 🟰 To Log HTTP Requests and Errors </li>
+            <li> <p class="npm-l"> 🔷 'connect-mongodb-session'</p> 🟰 To Connect with MongoDB Database Session </li>
+            <li> <p class="npm-l"> 🔷 'connect-mongodb-session'</p> 🟰 To Connect with MongoDB Database Session </li> 
+            <li> <p class="npm-l"> 🔷 '@amazon-sdk/client3'</p> 🟰 To Connect with S3 Storage on Amazon Cloud </li>            
+        </ul>
+    </div>
+
+    <div class="npm centered" style="background-color: #E4EFE7;">
+        <div class="npm-head">Node Core Modules and Utilities</div>
+        <ul class="npm-list">
+            <li> <p class="npm-l"> 🟢 'fs'</p> 🟰 To Store, Access, and Manage data on Operating System </li>
+            <li> <p class="npm-l"> 🟢 'path'</p> 🟰 To Access and Interact with File System </li>
+            <li> <p class="npm-l"> 🔵 'nodemailer'</p> 🟰 To Send E-Mails from Server </li> 
+            <li> <p class="npm-l"> 🔵 'nodemon'</p> 🟰 Automatically Restarts Node Application when Changes Done </li>    
+        </ul>
+    </div>
+
+    <br>
+    <br>
+
+    <%- include('../includes/end.ejs') %>

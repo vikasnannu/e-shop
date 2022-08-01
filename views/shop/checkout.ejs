@@ -1,0 +1,39 @@
+<%- include('../includes/head.ejs') %>
+
+</head>
+
+<body>
+    <%- include('../includes/nav.ejs') %>
+
+    <main>
+
+        <div class="centered">
+            <h1 style="margin:0" class="no-order">Get your products now 😻🪁</h1>
+        </div>
+
+        <ul class="cart__item-list">
+            <% products.forEach(p => { %>
+            <li class="cart__item">
+                <h1><%= p.productId.title %></h1>
+                <p class="per-item">Items Break-Up ➡ ₹<%= p.productId.price %> ✖ <%= p.quantity %> </p>
+                <h2>Total Price 🟰 ₹<%= p.productId.price * p.quantity %></h2>
+            </li>
+            <% }) %>
+        </ul>
+
+        <div class="centered">
+            <h2 class="net-total"> Net Order Total 🟰
+                <p class="net-price"> ₹ <%= totalSum %></p>
+            </h2>
+        </div>
+
+        <div class="centered">
+            <a class="btn final-check" href="/create-checkout-session">
+                <h2> PAY NOW 💯✅🚀</h2>
+            </a>
+        </div>
+
+
+    </main>
+
+    <%- include('../includes/end.ejs') %>

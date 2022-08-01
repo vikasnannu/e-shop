@@ -1,0 +1,38 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <main>
+
+        <% if (orders.length <= 0) { %>
+
+        <div class="centered">
+            <h1 class="no-order">Nothing Ordered Yet 😿</h1>
+            <h1 class="yes-order">Order your favrout product now! 😻</h1>
+            <div><a class="btn order-now-shop" href="/shop-products">Shop Now! 🎯</a></div>
+        </div>
+
+        <% } else { %>
+
+        <div class="centered">
+            <h1 style="margin:0" class="no-order">Your Orders 😻🎨</h1>
+        </div>
+
+        <ul class="orders">
+            <% orders.forEach(order => { %>
+            <li class="orders__item">
+                <h3 class="order-no">Order - # <%= order._id %> 🔗 <a class="invoice-link" href="/orders/<%=order._id%>"> Invoice </a> </h3>
+                <ul class="orders__products">
+                    <% order.products.forEach(p => { %>
+                    <li class="orders__products-item"><%= p.product.title %> (<%= p.quantity %>) </li>
+                    <% }); %>
+                </ul>
+            </li>
+            <% }); %>
+        </ul>
+
+        <% } %>
+        
+    </main>
+    <%- include('../includes/end.ejs') %>
